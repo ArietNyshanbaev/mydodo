@@ -1,0 +1,20 @@
+uwsgi:
+    socket: /var/tmp/221_uwsgi.sock
+    
+    pythonpath: /home/userp/221.kg/www221kg
+    
+    env: DJANGO_SETTINGS_MODULE=www221kg.settings
+    
+    module: wsgi
+   
+    daemonize: /home/userp/221.kg/logs/uwsgi.log
+    
+    max-requests: 5000
+    buffer-size: 32768
+    harakiri: 30
+    reload-mercy: 8
+    master: 1
+    no-orphans: 1
+    
+    touch-reload: /home/userp/221.kg/uwsgi
+
