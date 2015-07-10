@@ -1,0 +1,203 @@
+{%load staticfiles%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>mydodo.kg</title>
+	<!-- core CSS -->
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'css/owl.transitions.css' %}" rel="stylesheet">
+    <link href="{% static 'css/prettyPhoto.css' %}" rel="stylesheet">
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+</head><!--/head-->
+
+<body id="home" class="homepage">
+
+
+    <header id="top-header" class="navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <!-- responsive nav button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- /responsive nav button -->
+                    
+                    <!-- logo -->
+                    <div class="navbar-brand">
+                        <a class="smooth-scroll" data-section="#home" href="#home" >
+                            <h4 style="color:white">Мой Додыр</h4>
+                        </a>
+                    </div>
+                    <!-- /logo -->
+                </div>
+
+                <!-- main nav -->
+                <nav class="collapse navbar-collapse navbar-right" role="navigation">
+                    <div class="main-menu">
+                        <ul id="nav" class="nav navbar-nav">
+                            <li class="scroll"><a href="#home" data-section="#home">главная</a></li>
+                            <li class="scroll"><a href="#about" data-section="#about">о нас</a></li>
+                            <li class="scroll"><a href="#features" data-section="#features">преимущества</a></li>
+                            <li class="scroll"><a href="#services" data-section="#services">сервисы</a></li>
+                            <li class="scroll"><a href="#portfolio" data-section="#portfolio">наши работы</a></li>
+                            <li class="scroll"><a href="#contact-area" data-section="#contact-area">контакты</a></li>   
+                        </ul>
+                    </div>
+                </nav>
+                <!-- /main nav -->
+                
+            </div>
+        </header>
+    <section id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown">Наши  Преимущества</h2>
+                <p class="text-center wow fadeInDown">Мы знаем толк в хорошей уборке и хотим, чтобы у вас всегда было чисто в квартире и легко на душе
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 wow fadeInLeft">
+                    <br>
+                    <img class="img-responsive" src="{% static 'images/feature1.png'%}" alt="">
+                </div>
+                <div class="col-sm-6">
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-clock-o"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Доступность</h4>
+                            <p>Приезжаем в любое время</p>
+                        </div>
+                    </div>
+
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-thumbs-o-up"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Качество</h4>
+                            <p>Гарантируем высокое качество</p>
+                        </div>
+                    </div>
+
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-check-square-o"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Профессиональность</h4>
+                            <p>Обучаем каждого сотрудника</p>
+                        </div>
+                    </div>
+
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-dollar"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">Цена</h4>
+                            <p>У нас идеальное соотношение цены и качества</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta2">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">Как вы понимаете нельзя не заказать уборку у нас</h2>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">Убедительное предложение который заставить клиента заказать уборку</p>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms"><a class="btn btn-primary btn-lg" href="#">Заказать уборку сейчас</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-area">
+        <div class="container">
+            <div class="row">
+                <div class="section-header">
+                    <h2 class="section-title text-center wow fadeInDown animated" style="visibility: visible;">СВЯЗАТЬСЯ С НАМИ</h2>
+                    <p class="text-center wow fadeInDown animated" style="visibility: visible;">Если у вас возникли вопросы или если есть предложения - обращайтесь.</p>
+                </div>
+                <form  name="contact-form" method="post" action="{% url 'main:send_message'%}">
+                {% csrf_token %}
+                    <div class="col-lg-6 animated animate-from-left" style="opacity: 1; left: 0px;">
+
+                        <div class="form-group">
+                                <label for="name">Имя</label>
+                                <input id="name" type="text" name="name" class="form-control" placeholder="введите имя" required>
+                            </div>
+                        <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="введите email" required>
+                            </div>
+                        <div class="form-group">
+                            <label for="subject">Тема</label>
+                            <input type="text" id="subject" name="subject" class="form-control" placeholder="написать тему" required>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-6 animated animate-from-right" style="opacity: 1; right: 0px;">
+                        <div class="form-group">
+                            <label for="message">Сообщение</label>
+                            <textarea name="message" id="message" class="form-control" rows="8" placeholder="написать сообщение" required></textarea>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="text-center">
+
+                          <button type="submit" class="btn btn-primary btn-lg">Отправить сообщение</button>
+
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </section><!--/#bottom-->
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="text-center">
+                        &copy; 2015 Мой Додыр.</a>
+                    </p>
+                    
+                    <ul class="social-icons text-center">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+
+    <script src="{% static 'js/jquery.js'%}"></script>
+    <script src="{% static 'js/bootstrap.min.js'%}"></script>
+    <script src="{% static 'js/owl.carousel.min.js'%}"></script>
+    <script src="{% static 'js/mousescroll.js'%}"></script>
+    <script src="{% static 'js/jquery.prettyPhoto.js'%}"></script>
+    <script src="{% static 'js/jquery.isotope.min.js'%}"></script>
+    <script src="{% static 'js/jquery.inview.min.js'%}"></script>
+    <script src="{% static 'js/wow.min.js'%}"></script>
+    <script src="{% static 'js/main.js'%}"></script>
+</body>
+</html>
