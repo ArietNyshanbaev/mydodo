@@ -16,7 +16,7 @@ def mainpage(request):
 	
 
 	args['categories'] = Category.objects.all()
-	return render_to_response('main/main.html',args)
+	return render_to_response('main/main.htm',args)
 
 def contacts(request):
 	#initialize variables

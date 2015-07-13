@@ -50,14 +50,16 @@
                             <li class="scroll"><a href="#features" data-section="#features" style=" font-family: Museo Sans Helvetica Arial sans-serif; font-size: 18px;">преимущества</a></li>
                             <li class="scroll"><a href="#services" data-section="#services" style=" font-family: Museo Sans Helvetica Arial sans-serif; font-size: 18px;">услуги</a></li>
                             <li class="scroll"><a href="#portfolio" data-section="#portfolio" style=" font-family: Museo Sans Helvetica Arial sans-serif; font-size: 18px;">наши работы</a></li>
-                            <li class="scroll"><a href="#contact-area" data-section="#contact-area" style=" font-family: Museo Sans Helvetica Arial sans-serif; font-size: 18px;">контакты</a></li>   
+                            
                         </ul>
+                        <a href="{% url 'main:contacts' %}" style=" font-family: Museo Sans Helvetica Arial sans-serif; font-size: 18px;"><span id="contact" style=" line-height: 48px;padding: 10px 15px;text-decoration: none;background: transparent;">контакты</span> </a>
                     </div>
                 </nav>
                 <!-- /main nav -->
                 
             </div>
         </header>
+
     {% if success_message%}
             <div class="alert alert-success text-center" role="alert">
             <br>
@@ -76,6 +78,8 @@
                                     <h2 style="color:yelow">Давайте начистоту</h2>
                                     <p>У вас есть миллион причин не убираться дома.<br> Например, мы.</p>
                                     <br>
+                                
+
                                     <a target="_blank" class="btn btn-primary btn-lg" href="{%url 'main:order'%}">Заказать уборку</a>
                                 </div>
                             </div>

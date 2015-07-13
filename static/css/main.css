@@ -16,6 +16,9 @@ body {
   color: #64686d;
   line-height: 26px;
 }
+#contact{
+  color:#743B94;
+}
 h1,
 h2,
 h3,
@@ -32,7 +35,7 @@ p {
     font-weight: 300;
 }
 a {
-  color: #72C05B;
+  color:#743B94;
   -webkit-transition: color 400ms, background-color 400ms;
   -moz-transition: color 400ms, background-color 400ms;
   -o-transition: color 400ms, background-color 400ms;
@@ -42,6 +45,9 @@ a:hover,
 a:focus {
   text-decoration: none;
   color: #72C05B;
+}
+#contact:hover {
+  color: yellow;
 }
 hr {
   border-top: 1px solid #e5e5e5;
