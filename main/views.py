@@ -18,6 +18,16 @@ def mainpage(request):
 	args['categories'] = Category.objects.all()
 	return render_to_response('main/main.html',args)
 
+def contacts(request):
+	#initialize variables
+	args={}
+	args.update(csrf(request))
+
+	
+
+	args['categories'] = Category.objects.all()
+	return render_to_response('main/contacts.html',args)
+
 def send_message(request):
 	#init variables
 	args={}
@@ -33,7 +43,7 @@ def send_message(request):
 		args['success_message'] = "Ваше сообщение успешно отправлено."
 		return render_to_response('main/main.html',args)
 	else:
-		return redirect(reverse('main:main'))
+		return redirect(reverse('main:contacts'))
 
 def add_order(request):
 	args={}

@@ -36,7 +36,7 @@
                     <!-- logo -->
                     <div class="navbar-brand">
                         <a class="smooth-scroll" data-section="#home" href="#home" >
-                            <h4 style="color:white;  font-family: Museo Sans, Helvetica, Arial, sans-serif;">Мой Додыр</h4>
+                            <h4 style="color:#743B94; font-family: Museo Sans Helvetica Arial sans-serif;">Мой Додыр</h4>
                         </a>
                     </div>
                     <!-- /logo -->
@@ -46,13 +46,11 @@
                 <nav class="collapse navbar-collapse navbar-right" role="navigation">
                     <div class="main-menu">
                         <ul id="nav" class="nav navbar-nav">
-                            <li class="scroll"><a href="#home" data-section="#home" style="  font-family:Museo Sans, Helvetica, Arial, sans-serif;
-  font-size: 13px;">главная</a></li>
-                            <li class="scroll"><a href="#about" data-section="#about"  style=" font-family: Museo Sans, Helvetica, Arial, sans-serif;">о нас </a></li>
-                            <li class="scroll"><a href="#features" data-section="#features" style=" font-family: Museo Sans, Helvetica, Arial, sans-serif;">преимущества</a></li>
-                            <li class="scroll"><a href="#services" data-section="#services" style=" font-family: Museo Sans, Helvetica, Arial, sans-serif;">услуги</a></li>
-                            <li class="scroll"><a href="#portfolio" data-section="#portfolio" style=" font-family: Museo Sans, Helvetica, Arial, sans-serif;">наши работы</a></li>
-                            <li class="scroll"><a href="#contact-area" data-section="#contact-area" style=" font-family: Museo Sans, Helvetica, Arial, sans-serif;">контакты</a></li>   
+                            <li class="scroll"><a href="#about" data-section="#about"  style=" font-family: Museo Sans Helvetica Arial sans-serif; font-size: 18px;">о нас </a></li>
+                            <li class="scroll"><a href="#features" data-section="#features" style=" font-family: Museo Sans Helvetica Arial sans-serif; font-size: 18px;">преимущества</a></li>
+                            <li class="scroll"><a href="#services" data-section="#services" style=" font-family: Museo Sans Helvetica Arial sans-serif; font-size: 18px;">услуги</a></li>
+                            <li class="scroll"><a href="#portfolio" data-section="#portfolio" style=" font-family: Museo Sans Helvetica Arial sans-serif; font-size: 18px;">наши работы</a></li>
+                            <li class="scroll"><a href="#contact-area" data-section="#contact-area" style=" font-family: Museo Sans Helvetica Arial sans-serif; font-size: 18px;">контакты</a></li>   
                         </ul>
                     </div>
                 </nav>
@@ -67,15 +65,17 @@
             </div>
     {% endif %}
     <section id="main-slider">
-        <div class="owl-carousel">
-            <div class="item" style="background-image: url({% static 'images/slider/clean_1.jpg' %});">
+        <div >
+            <div class="item" style="background-image: url({% static 'images/slider/main.jpg' %});">
                 <div class="slider-inner">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="carousel-content text-center">
+                                <br><br>
                                     <h2 style="color:yelow">Давайте начистоту</h2>
                                     <p>У вас есть миллион причин не убираться дома.<br> Например, мы.</p>
+                                    <br>
                                     <a target="_blank" class="btn btn-primary btn-lg" href="{%url 'main:order'%}">Заказать уборку</a>
                                 </div>
                             </div>
@@ -83,6 +83,7 @@
                     </div>
                 </div>
             </div><!--/.item-->
+            <!--
             <div class="item" style="background-image: url({% static 'images/slider/clean_2.jpg' %});">
                 <div class="slider-inner">
                     <div class="container">
@@ -98,7 +99,7 @@
                         </div>
                     </div>
                 </div>
-            </div><!--/.item-->
+            </div><!--/.item
             <div class="item" style="background-image: url({% static 'images/slider/clean_3.jpg' %});">
                 <div class="slider-inner">
                     <div class="container">
@@ -260,6 +261,56 @@
         </div><!--/.container-->
     </section><!--/#services-->
 
+    <section id="testimonial">
+        <div class="container">
+            <div class="row">
+                <div>
+
+                <div class="text-center"> 
+                    <h2 style="color:white">Отзывы клиентов</h2>
+                    <br>
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="item active">
+                                        <p><img class="img-circle img-thumbnail" src="{% static 'images/testimonial/otzyv1.jpg'%}" height="150" width="150" alt=""></p>
+                                        <h4>Рома Ким</h4>
+                                        <small>студент</small>
+                                        <p class="text-left " style="  font-family: Museo Sans Helvetica Arial sans-serif;
+  font-size: 18px;">После каждой вечеринки, как известно, создается куча работы, надо было убрать дом, чтобы родители дальше доверяли)). Надо было заранее об этом задуматься, однако реально спас нас всех Мой Додыр, приехали две женщины и за секунды все убрали, я реально рад!</p>
+                                    </div>
+                                    <br>
+                                </div>
+                                <div class="col-md-2"></div>
+                                <div class="col-md-5">
+                                        <div class="item active">
+                                        <p><img class="img-circle img-thumbnail" src="{% static 'images/testimonial/otzyv2.jpg'%}" height="150" width="150" alt=""></p>
+                                        <h4>Карина Исхакова</h4>
+                                        <small>бизнес леди</small>
+                                        <p class="text-left" style="  font-family: Museo Sans Helvetica Arial sans-serif;
+  font-size: 18px;">Ближе к вечеру вспомнила, что звала друзей отметить мое небольшое повышение, только вот сил не было вообще, подруга посоветовала какой-то Мой Додыр, говорит убираются недорого, в общем заказала, в итоге вечер удался, за что вам спасибо, с меня отзыв как и обещала!)</p>
+                                    </div>
+                                    <br>
+                                </div>
+                                <div class="col-md-12"><br><br></div>
+                                <div class="col-md-5">
+                                    <div class="item active">
+                                        <p><img class="img-circle img-thumbnail" src="{% static 'images/testimonial/otzyv3.jpg'%}" height="150" width="150" alt=""></p>
+                                        <h4>Рустам Раимбеков</h4>
+                                        <small>просто довольный клиент</small>
+                                        <p class="text-left" style="  font-family: Museo Sans Helvetica Arial sans-serif;
+  font-size: 18px;">Приехали с семьей с ИК, решили родителей позвать, дома грязно и не было еды, жена беременная была на тот момент, тогда в ФБ увидели пост этой компании, женщина пришла убралась и приготовила долгожданную еду, мне понравилась цена и качество, правда сроком тоже не подвели.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--/#testimonial-->
+
     <section id="portfolio">
         <div class="container">
             <div class="section-header">
@@ -384,104 +435,6 @@
     </section><!--/#portfolio-->
 
 
-
-
-
-
-
-    <section id="testimonial">
-        <div class="container">
-            <div class="row">
-                <div>
-
-                <div class="text-center"> 
-                    <h2 style="color:white">Отзывы клиентов</h2>
-                    <br>
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner" role="listbox">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="item active">
-                                        <p><img class="img-circle img-thumbnail" src="{% static 'images/testimonial/otzyv1.jpg'%}" height="150" width="150" alt=""></p>
-                                        <h4>Рома Ким</h4>
-                                        <small>студент</small>
-                                        <p>После каждой вечеринки, как известно, создается куча работы, надо было убрать дом, чтобы родители дальше доверяли)). Надо было заранее об этом задуматься, однако реально спас нас всех Мой Додыр, приехали две женщины и за секунды все убрали, я реально рад!</p>
-                                    </div>
-                                    <br>
-                                </div>
-                                <div class="col-md-6">
-                                        <div class="item active">
-                                        <p><img class="img-circle img-thumbnail" src="{% static 'images/testimonial/otzyv2.jpg'%}" height="150" width="150" alt=""></p>
-                                        <h4>Карина Исхакова</h4>
-                                        <small>бизнес леди</small>
-                                        <p>Ближе к вечеру вспомнила, что звала друзей отметить мое небольшое повышение, только вот сил не было вообще, подруга посоветовала какой-то Мой Додыр, говорит убираются недорого, в общем заказала, в итоге вечер удался, за что вам спасибо, с меня отзыв как и обещала!)</p>
-                                    </div>
-                                    <br>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="item active">
-                                        <p><img class="img-circle img-thumbnail" src="{% static 'images/testimonial/otzyv3.jpg'%}" height="150" width="150" alt=""></p>
-                                        <h4>Рустам Раимбеков</h4>
-                                        <small>просто довольный клиент</small>
-                                        <p>Приехали с семьей с ИК, решили родителей позвать, дома грязно и не было еды, жена беременная была на тот момент, тогда в ФБ увидели пост этой компании, женщина пришла убралась и приготовила долгожданную еду, мне понравилась цена и качество, правда сроком тоже не подвели.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!--/#testimonial-->
-
-
-
-
-
-    <section id="contact-area">
-        <div class="container">
-            <div class="row">
-                <div class="section-header">
-                    <h2 class="section-title text-center wow fadeInDown animated" style="visibility: visible;">СВЯЗАТЬСЯ С НАМИ</h2>
-                    <p class="text-center wow fadeInDown animated" style="visibility: visible;">Если у вас возникли вопросы или если есть предложения - обращайтесь.</p>
-                </div>
-                <form  name="contact-form" method="post" action="{% url 'main:send_message'%}">
-                {% csrf_token %}
-                    <div class="col-lg-6 animated animate-from-left" style="opacity: 1; left: 0px;">
-
-                        <div class="form-group">
-                                <label for="name">Имя</label>
-                                <input id="name" type="text" name="name" class="form-control" placeholder="введите имя" required>
-                            </div>
-                        <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" name="email" class="form-control" placeholder="введите email" required>
-                            </div>
-                        <div class="form-group">
-                            <label for="subject">Тема</label>
-                            <input type="text" id="subject" name="subject" class="form-control" placeholder="написать тему" required>
-                        </div>
-
-                    </div>
-                    <div class="col-lg-6 animated animate-from-right" style="opacity: 1; right: 0px;">
-                        <div class="form-group">
-                            <label for="message">Сообщение</label>
-                            <textarea name="message" id="message" class="form-control" rows="8" placeholder="написать сообщение" required></textarea>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                    <div class="text-center">
-
-                          <button type="submit" class="btn btn-primary btn-lg">Отправить сообщение</button>
-
-                    </div>
-
-                </form>
-
-            </div>
-        </div>
-    </section><!--/#bottom-->
-
     <footer id="footer">
         <div class="container">
             <div class="row">
@@ -494,8 +447,7 @@
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                        <li><a href="#"><i class="fa fa-vk"></i></a></li>
                     </ul>
                 </div>
             </div>
