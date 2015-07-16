@@ -35,10 +35,9 @@ def send_message(request):
 	if request.POST:
 		name = request.POST['name']
 		email = request.POST['email']
-		subject = request.POST['subject']
 		message = request.POST['message']
 
-		mail = Mail.objects.create(name=name, email=email, title=subject, body=message)
+		mail = Mail.objects.create(name=name, email=email, body=message)
 		mail.save()
 		args['success_message'] = "Ваше сообщение успешно отправлено."
 		return render_to_response('main/main.html',args)
