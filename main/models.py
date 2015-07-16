@@ -35,11 +35,10 @@ class Order(models.Model):
 class Mail(models.Model):
 	name = models.CharField('имя отправителя',max_length=100)
 	email = models.CharField(max_length=100)
-	title = models.CharField('тема',max_length=100)
 	body = models.CharField('сообщение',max_length=1000)
 	date = models.DateTimeField('дата отправления', default=datetime.now)
 	def __unicode__(self):
-		return self.title
+		return self.email
 
 	class Meta:
 		verbose_name = "сообщение"
