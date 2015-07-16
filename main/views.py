@@ -40,7 +40,7 @@ def send_message(request):
 		mail = Mail.objects.create(name=name, email=email, body=message)
 		mail.save()
 		args['success_message'] = "Ваше сообщение успешно отправлено."
-		return render_to_response('main/main.html',args)
+		return render_to_response('main/main.htm',args)
 	else:
 		return redirect(reverse('main:contacts'))
 
