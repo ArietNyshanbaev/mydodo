@@ -17,7 +17,7 @@ body {
   line-height: 26px;
 }
 #contact{
-  color:#0B7EDD;
+  color:#fff;
 }
 h1,
 h2,
@@ -27,7 +27,7 @@ h5,
 h6 {
   font-weight: 600;
   font-family: 'Roboto', sans-serif;
-  color: #272727;
+  color: #fff;
 }
 p {
     font-size: 14px;
@@ -260,7 +260,7 @@ ul.nostyle i {
   font-size: 36px;
   line-height: 1;
   text-transform: uppercase;
-  color: #fff;
+  color: #197127;
 }
 #main-slider .slider-inner h2 > span {
   color: #72C05B;
@@ -644,7 +644,7 @@ ul.nostyle i {
   color: #888;
 }
 #contact-area .form-group textarea {
-  height: 195px;
+  height: 106px;
 }
 
 #contact-area .form-control:focus, #focusedInput {
