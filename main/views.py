@@ -69,7 +69,7 @@ def add_order(request):
 
 		args['success_message'] = "Ваша заявка принята."
 		message += '\ndate:' + str(date.encode('utf-8')) + '\n telephone:' + str(telephone.encode('utf-8'))
-		sms_url = 'http://smsc.ru/sys/send.php?login=shimanazar&psw=shima1318&phones=996556606737&mes='
+		sms_url = 'http://smsc.ru/sys/send.php?login=shimanazar&psw=shima1318&phones=996557081318&mes='
 		sms_url += message
 		r = requests.get(sms_url)
 		return render_to_response('main/main.htm',args)
