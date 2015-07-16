@@ -18,7 +18,7 @@ class Category(models.Model):
 class Order(models.Model):
 	name = models.CharField('имя заказчика',max_length=100)
 	telephone = models.CharField('номер телефона',max_length=100)
-	#category = models.ForeignKey(Category, verbose_name='категория')
+	category = models.CharField('категория',max_length=100, default='')
 	date_of_order = models.CharField('дата и время исполнения заказа',max_length=200, default="не указан")
 	address = models.CharField('адрес',max_length=400, default="не указан")
 	value = models.CharField('помещение',max_length=400, default="не указан")

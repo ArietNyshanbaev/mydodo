@@ -45,6 +45,7 @@ def send_message(request):
 		return redirect(reverse('main:contacts'))
 
 def add_order(request):
+	message = "mydodo:"
 	args={}
 	args.update(csrf(request))
 
@@ -59,15 +60,19 @@ def add_order(request):
 		date = date + " " + time
 		if request.POST['yes'] == 'kvartira':
 			rooms = request.POST['rooms']
-			order = Order.objects.create(name=name, telephone=telephone, date_of_order=date , address=address, value=rooms)
+			order = Order.objects.create(name=name, telephone=telephone,category=category, date_of_order=date , address=address, value=rooms)
 			order.save()
 		else:
 			area = request.POST['ofis']
-			order = Order.objects.create(name=name, telephone=telephone, date_of_order=date , address=address, value=area)
+			order = Order.objects.create(name=name, telephone=telephone,category=category, date_of_order=date , address=address, value=area)
 			order.save()
 
 		args['success_message'] = "Ваша заявка принята."
-		return render_to_response('main/main.html',args)
+		message += '\ndate:' + str(date.encode('utf-8')) + '\n telephone:' + str(telephone.encode('utf-8'))
+		sms_url = 'http://smsc.ru/sys/send.php?login=shimanazar&psw=shima1318&phones=996556606737&mes='
+		sms_url += message
+		r = requests.get(sms_url)
+		return render_to_response('main/main.htm',args)
 	else:
 		return render_to_response('main/order_form.html',args)
 
